@@ -11,17 +11,20 @@ quantized_by: TheBloke
 ---
 
 <!-- header start -->
-<div style="width: 100%;">
-    <img src="https://i.imgur.com/EBdldam.jpg" alt="TheBlokeAI" style="width: 100%; min-width: 400px; display: block; margin: auto;">
+<!-- 200823 -->
+<div style="width: auto; margin-left: auto; margin-right: auto">
+<img src="https://i.imgur.com/EBdldam.jpg" alt="TheBlokeAI" style="width: 100%; min-width: 400px; display: block; margin: auto;">
 </div>
 <div style="display: flex; justify-content: space-between; width: 100%;">
     <div style="display: flex; flex-direction: column; align-items: flex-start;">
-        <p><a href="https://discord.gg/theblokeai">Chat & support: my new Discord server</a></p>
+        <p style="margin-top: 0.5em; margin-bottom: 0em;"><a href="https://discord.gg/theblokeai">Chat & support: TheBloke's Discord server</a></p>
     </div>
     <div style="display: flex; flex-direction: column; align-items: flex-end;">
-        <p><a href="https://www.patreon.com/TheBlokeAI">Want to contribute? TheBloke's Patreon page</a></p>
+        <p style="margin-top: 0.5em; margin-bottom: 0em;"><a href="https://www.patreon.com/TheBlokeAI">Want to contribute? TheBloke's Patreon page</a></p>
     </div>
 </div>
+<div style="text-align:center; margin-top: 0em; margin-bottom: 0em"><p style="margin-top: 0.25em; margin-bottom: 0em;">TheBloke's LLM work is generously supported by a grant from <a href="https://a16z.com">andreessen horowitz (a16z)</a></p></div>
+<hr style="margin-top: 1.0em; margin-bottom: 1.0em;">
 <!-- header end -->
 
 # MythoMax L2 13B - GPTQ
@@ -77,11 +80,11 @@ All GPTQ files are made with AutoGPTQ.
 
 | Branch | Bits | GS | Act Order | Damp % | GPTQ Dataset | Seq Len | Size | ExLlama | Desc |
 | ------ | ---- | -- | --------- | ------ | ------------ | ------- | ---- | ------- | ---- |
-| [main](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/main) | 4 | 128 | No | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.26 GB | Yes | Most compatible option. Good inference speed in AutoGPTQ and GPTQ-for-LLaMa. Lower inference quality than other options. | 
-| [gptq-4bit-32g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-32g-actorder_True) | 4 | 32 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 8.00 GB | Yes | 4-bit, with Act Order and group size 32g. Gives highest possible inference quality, with maximum VRAM usage. Poor AutoGPTQ CUDA speed. | 
-| [gptq-4bit-64g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-64g-actorder_True) | 4 | 64 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.51 GB | Yes | 4-bit, with Act Order and group size 64g. Uses less VRAM than 32g, but with slightly lower accuracy. Poor AutoGPTQ CUDA speed. | 
-| [gptq-4bit-128g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-128g-actorder_True) | 4 | 128 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.26 GB | Yes | 4-bit, with Act Order and group size 128g. Uses even less VRAM than 64g, but with slightly lower accuracy. Poor AutoGPTQ CUDA speed. | 
-| [gptq-8bit--1g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-8bit--1g-actorder_True) | 8 | None | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 13.36 GB | No | 8-bit, with Act Order. No group size, to lower VRAM requirements and to improve AutoGPTQ speed. | 
+| [main](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/main) | 4 | 128 | No | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.26 GB | Yes | Most compatible option. Good inference speed in AutoGPTQ and GPTQ-for-LLaMa. Lower inference quality than other options. |
+| [gptq-4bit-32g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-32g-actorder_True) | 4 | 32 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 8.00 GB | Yes | 4-bit, with Act Order and group size 32g. Gives highest possible inference quality, with maximum VRAM usage. Poor AutoGPTQ CUDA speed. |
+| [gptq-4bit-64g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-64g-actorder_True) | 4 | 64 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.51 GB | Yes | 4-bit, with Act Order and group size 64g. Uses less VRAM than 32g, but with slightly lower accuracy. Poor AutoGPTQ CUDA speed. |
+| [gptq-4bit-128g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-4bit-128g-actorder_True) | 4 | 128 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 7.26 GB | Yes | 4-bit, with Act Order and group size 128g. Uses even less VRAM than 64g, but with slightly lower accuracy. Poor AutoGPTQ CUDA speed. |
+| [gptq-8bit--1g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-8bit--1g-actorder_True) | 8 | None | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 13.36 GB | No | 8-bit, with Act Order. No group size, to lower VRAM requirements and to improve AutoGPTQ speed. |
 | [gptq-8bit-128g-actorder_True](https://huggingface.co/TheBloke/MythoMax-L2-13B-GPTQ/tree/gptq-8bit-128g-actorder_True) | 8 | 128 | Yes | 0.1 | [wikitext](https://huggingface.co/datasets/wikitext/viewer/wikitext-2-v1/test) | 4096 | 13.65 GB | No | 8-bit, with group size 128g for higher inference quality and with Act Order for even higher accuracy. Poor AutoGPTQ CUDA speed. |
 
 ## How to download from branches
@@ -205,6 +208,7 @@ The files provided will work with AutoGPTQ (CUDA and Triton modes), GPTQ-for-LLa
 ExLlama works with Llama models in 4-bit. Please see the Provided Files table above for per-file compatibility.
 
 <!-- footer start -->
+<!-- 200823 -->
 ## Discord
 
 For further support, and discussions on these models and AI in general, join us at:
@@ -224,12 +228,14 @@ Donaters will get priority support on any and all AI/LLM/model questions and req
 * Patreon: https://patreon.com/TheBlokeAI
 * Ko-Fi: https://ko-fi.com/TheBlokeAI
 
-**Special thanks to**: Luke from CarbonQuill, Aemon Algiz.
+**Special thanks to**: Aemon Algiz.
 
-**Patreon special mentions**: Willem Michiel, Ajan Kanaga, Cory Kujawski, Alps Aficionado, Nikolai Manek, Jonathan Leane, Stanislav Ovsiannikov, Michael Levine, Luke Pendergrass, Sid, K, Gabriel Tamborski, Clay Pascal, Kalila, William Sang, Will Dee, Pieter, Nathan LeClaire, ya boyyy, David Flickinger, vamX, Derek Yates, Fen Risland, Jeffrey Morgan, webtim, Daniel P. Andersen, Chadd, Edmond Seymore, Pyrater, Olusegun Samson, Lone Striker, biorpg, alfie_i, Mano Prime, Chris Smitley, Dave, zynix, Trenton Dambrowitz, Johann-Peter Hartmann, Magnesian, Spencer Kim, John Detwiler, Iucharbius, Gabriel Puliatti, LangChain4j, Luke @flexchar, Vadim, Rishabh Srivastava, Preetika Verma, Ai Maven, Femi Adebogun, WelcomeToTheClub, Leonard Tan, Imad Khwaja, Steven Wood, Stefan Sabev, Sebastain Graf, usrbinkat, Dan Guido, Sam, Eugene Pentland, Mandus, transmissions 11, Slarti, Karl Bernard, Spiking Neurons AB, Artur Olbinski, Joseph William Delisle, ReadyPlayerEmma, Olakabola, Asp the Wyvern, Space Cruiser, Matthew Berman, Randy H, subjectnull, danny, John Villwock, Illia Dulskyi, Rainer Wilmers, theTransient, Pierre Kircher, Alexandros Triantafyllidis, Viktor Bowallius, terasurfer, Deep Realms, SuperWojo, senxiiz, Oscar Rangel, Alex, Stephen Murray, Talal Aujan, Raven Klaugh, Sean Connelly, Raymond Fosdick, Fred von Graf, chris gileta, Junyu Yang, Elle
+**Patreon special mentions**: Sam, theTransient, Jonathan Leane, Steven Wood, webtim, Johann-Peter Hartmann, Geoffrey Montalvo, Gabriel Tamborski, Willem Michiel, John Villwock, Derek Yates, Mesiah Bishop, Eugene Pentland, Pieter, Chadd, Stephen Murray, Daniel P. Andersen, terasurfer, Brandon Frisco, Thomas Belote, Sid, Nathan LeClaire, Magnesian, Alps Aficionado, Stanislav Ovsiannikov, Alex, Joseph William Delisle, Nikolai Manek, Michael Davis, Junyu Yang, K, J, Spencer Kim, Stefan Sabev, Olusegun Samson, transmissions 11, Michael Levine, Cory Kujawski, Rainer Wilmers, zynix, Kalila, Luke @flexchar, Ajan Kanaga, Mandus, vamX, Ai Maven, Mano Prime, Matthew Berman, subjectnull, Vitor Caleffi, Clay Pascal, biorpg, alfie_i, 阿明, Jeffrey Morgan, ya boyyy, Raymond Fosdick, knownsqashed, Olakabola, Leonard Tan, ReadyPlayerEmma, Enrico Ros, Dave, Talal Aujan, Illia Dulskyi, Sean Connelly, senxiiz, Artur Olbinski, Elle, Raven Klaugh, Fen Risland, Deep Realms, Imad Khwaja, Fred von Graf, Will Dee, usrbinkat, SuperWojo, Alexandros Triantafyllidis, Swaroop Kallakuri, Dan Guido, John Detwiler, Pedro Madruga, Iucharbius, Viktor Bowallius, Asp the Wyvern, Edmond Seymore, Trenton Dambrowitz, Space Cruiser, Spiking Neurons AB, Pyrater, LangChain4j, Tony Hughes, Kacper Wikieł, Rishabh Srivastava, David Ziegler, Luke Pendergrass, Andrey, Gabriel Puliatti, Lone Striker, Sebastain Graf, Pierre Kircher, Randy H, NimbleBox.ai, Vadim, danny, Deo Leter
 
 
 Thank you to all my generous patrons and donaters!
+
+And thank you again to a16z for their generous grant.
 
 <!-- footer end -->
 
@@ -261,7 +267,7 @@ For roleplay purposes, I suggest the following - Write <CHAR NAME>'s next reply 
 
 ### Response:
 ```
- 
+
 ---
 license: other
 ---

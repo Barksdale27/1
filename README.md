@@ -1,11 +1,11 @@
 ---
-base_model: https://huggingface.co/Gryphe/MythoMax-L2-13b
-inference: false
 language:
 - en
 license: other
-model_creator: Gryphe
 model_name: MythoMax L2 13B
+base_model: Gryphe/MythoMax-L2-13b
+inference: false
+model_creator: Gryphe
 model_type: llama
 prompt_template: '```
 
